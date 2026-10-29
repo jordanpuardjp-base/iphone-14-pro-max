@@ -1,0 +1,19 @@
+/* Source Serif 4 et Source Sans 3 (SIL Open Font License, voir LICENSE-*.txt),
+   figées en instances statiques par tools/make_fonts.py.
+   HM Display : grands titres et chiffres (taille optique « display »).
+   HM Serif   : intertitres, chapôs, citations (taille optique « texte »).
+   HM Sans    : texte courant et étiquettes. */
+@font-face { font-family: "HM Display"; font-weight: 300; font-style: normal; src: url(hm-display-300.woff2) format("woff2"); }
+@font-face { font-family: "HM Display"; font-weight: 600; font-style: normal; src: url(hm-display-600.woff2) format("woff2"); }
+@font-face { font-family: "HM Display"; font-weight: 600; font-style: italic; src: url(hm-display-600-italic.woff2) format("woff2"); }
+
+@font-face { font-family: "HM Serif"; font-weight: 400; font-style: normal; src: url(hm-serif-400.woff2) format("woff2"); }
+@font-face { font-family: "HM Serif"; font-weight: 400; font-style: italic; src: url(hm-serif-400-italic.woff2) format("woff2"); }
+@font-face { font-family: "HM Serif"; font-weight: 600; font-style: normal; src: url(hm-serif-600.woff2) format("woff2"); }
+@font-face { font-family: "HM Serif"; font-weight: 600; font-style: italic; src: url(hm-serif-600-italic.woff2) format("woff2"); }
+
+@font-face { font-family: "HM Sans"; font-weight: 400; font-style: normal; src: url(hm-sans-400.woff2) format("woff2"); }
+@font-face { font-family: "HM Sans"; font-weight: 400; font-style: italic; src: url(hm-sans-400-italic.woff2) format("woff2"); }
+@font-face { font-family: "HM Sans"; font-weight: 600; font-style: normal; src: url(hm-sans-600.woff2) format("woff2"); }
+@font-face { font-family: "HM Sans"; font-weight: 600; font-style: italic; src: url(hm-sans-600-italic.woff2) format("woff2"); }
+@font-face { font-family: "HM Sans"; font-weight: 700; font-style: normal; src: url(hm-sans-700.woff2) format("woff2"); }
