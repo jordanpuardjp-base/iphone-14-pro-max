@@ -14,7 +14,9 @@
     --gold: #8c6b37;         /* or lisible sur fond clair (texte) */
     --gold-rule: #b8955c;    /* or des filets et chiffres */
     --paper: #f5f5f2;        /* gris très clair des petits encadrés */
-    --panel: #ecebe7;        /* gris clair des grands blocs : une, comparatif, offre, contact */
+    --panel: #ecebe7;        /* gris clair des grands blocs : une, comparatif, contact */
+    --navy: #14213d;         /* bleu nuit réservé à la Solution Premium */
+    --gold-light: #d2b783;   /* or sur fond bleu nuit */
     --rule: #dddcd6;
     --display: "HM Display", Georgia, serif;
     --serif: "HM Serif", Georgia, serif;
@@ -37,6 +39,8 @@
   .rfoot { margin-top: auto; padding-top: 2.4mm; border-top: .5pt solid var(--rule); display: flex; justify-content: space-between; align-items: baseline; font: 400 6.8pt/1.2 var(--sans); letter-spacing: .03em; color: var(--muted); }
   .rfoot .num { font: 600 9pt/1 var(--serif); color: var(--ink); letter-spacing: 0; }
   .rfoot .num span { font-weight: 400; color: var(--muted); }
+  .credits { margin-top: auto; padding-bottom: 1.6mm; font: italic 400 6.2pt/1.3 var(--sans); color: var(--muted); }
+  .credits + .rfoot { margin-top: 0; }
 
   .kicker { display: flex; align-items: center; gap: 2.4mm; font: 600 6.6pt/1.25 var(--sans); letter-spacing: .16em; text-transform: uppercase; color: var(--gold); }
   .kicker::before { content: ""; flex: none; width: 7mm; height: .8pt; background: var(--gold-rule); }
@@ -126,7 +130,7 @@
   .vigil { display: grid; grid-template-columns: 40mm 1fr; gap: 7mm; background: var(--paper); border-left: 2pt solid var(--ink); padding: 4mm 6mm; }
   .vigil h2 { font-size: 14pt; line-height: 1.2; margin-top: 2mm; }
   .vigil .points { margin-top: 1.8mm; }
-  .sec { margin-top: 4.8mm; }
+  .sec { margin-top: 4.5mm; }
   .sec-head h2 { margin-top: 2.2mm; }
   .sec-head.inline { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; column-gap: 6mm; }
   .sec-head.inline .kicker { flex-basis: 100%; }
@@ -150,17 +154,22 @@
   .compare .with li::before { content: ""; position: absolute; left: .6mm; top: .9mm; width: 1.3mm; height: 2.5mm; border-right: 1.1pt solid var(--gold-rule); border-bottom: 1.1pt solid var(--gold-rule); transform: rotate(40deg); }
 
   /* ---------- page 4 : offre premium, partenaires, contact ---------- */
-  .premium { background: var(--panel); border-top: 2pt solid var(--gold-rule); padding: 7mm 8mm 6.5mm; }
+  .premium { background: var(--navy); color: #d6dceb; border-top: 2pt solid var(--gold-rule); padding: 7mm 8mm 6.5mm; }
+  .premium .kicker { color: var(--gold-light); }
+  .premium .kicker::before { background: var(--gold-light); }
+  .premium h2, .premium h3, .premium .ex-title { color: #fff; }
+  .premium b { color: var(--gold-light); }
   .pm-head { display: flex; justify-content: space-between; align-items: center; }
-  .pm-cert { font: 600 6.4pt/1 var(--sans); letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
+  .pm-cert { font: 600 6.4pt/1 var(--sans); letter-spacing: .14em; text-transform: uppercase; color: #aab6cf; }
   .premium h2 { font-size: 22pt; line-height: 1.08; margin-top: 3.2mm; }
-  .premium .lead { margin-top: 2.5mm; }
+  .premium .lead { color: #c9d2e5; margin-top: 2.5mm; }
   .pm-body { display: grid; grid-template-columns: 100mm 1fr; gap: 7mm; align-items: center; margin-top: 5mm; }
   .pm-body img { width: 100%; height: auto; }
-  .ex-title { font: 600 11pt/1.25 var(--serif); color: var(--ink); padding-bottom: 2mm; margin-bottom: 1mm; border-bottom: .5pt solid var(--gold-rule); }
+  .ex-title { font: 600 11pt/1.25 var(--serif); padding-bottom: 2mm; margin-bottom: 1mm; border-bottom: .5pt solid rgba(210,183,131,.45); }
   .premium .points li + li { margin-top: 2.2mm; }
-  .services { display: grid; grid-template-columns: repeat(3, 1fr); gap: 7mm; margin-top: 6mm; padding-top: 4.5mm; border-top: .5pt solid var(--gold-rule); }
-  .services .no { font: 300 22pt/1 var(--display); color: var(--gold-rule); }
+  .premium .points li::before { background: var(--gold-light); }
+  .services { display: grid; grid-template-columns: repeat(3, 1fr); gap: 7mm; margin-top: 6mm; padding-top: 4.5mm; border-top: .5pt solid rgba(210,183,131,.45); }
+  .services .no { font: 300 22pt/1 var(--display); color: var(--gold-light); }
   .services h3 { font-size: 11pt; margin: 1.6mm 0 1.4mm; }
 
   .partners { padding: 6.5mm 0; }
@@ -202,7 +211,7 @@
   <div class="np-rule"></div>
 
   <section class="cover">
-    <div class="photo"><img src="assets/photo-une.jpg" alt="Infirmière libérale en visite à domicile"></div>
+    <div class="photo"><img src="assets/photo-une.jpg" alt="Soignante à domicile aidant un patient âgé à se lever de son fauteuil" style="object-position: 50% 0%"></div>
     <div class="cover-panel">
       <div class="kicker">Édition spéciale N° 01</div>
       <h2>Cap sur l'Avenant 11</h2>
@@ -271,7 +280,7 @@
       <h1 class="h-xl">L'Avenant 11 : la nouvelle ère des soignants libéraux</h1>
       <p class="lead">Signé entre l'Assurance Maladie et les syndicats représentatifs, l'Avenant 11 transforme en profondeur l'exercice et la tarification des soignants libéraux. Décryptage exclusif des quatre réformes clés et de leur impact immédiat avec la majoration territoriale légale de +20 % dans les départements d'Outre-Mer.</p>
     </div>
-    <div class="photo r43"><img src="assets/photo-dossier.jpg" alt="Infirmière libérale au chevet d'un patient"></div>
+    <div class="photo r43"><img src="assets/photo-dossier.jpg" alt="Soignante en tenue réalisant un bandage"></div>
   </header>
 
   <div class="reforms">
@@ -348,7 +357,7 @@
       <div class="sub">3 avancées majeures</div>
     </div>
     <div class="kine-grid">
-      <div class="photo r43"><img src="assets/photo-kine.jpg" alt="Kinésithérapeute en séance de rééducation"></div>
+      <div class="photo r32"><img src="assets/photo-kine.jpg" alt="Kinésithérapeute mobilisant la jambe d'une patiente sur table de soin"></div>
       <ol class="adv">
         <li><span class="n">1</span><div><b>Élargissement du droit de prescription (Arrêté du 14 septembre 2026)</b>Les masseurs-kinésithérapeutes peuvent désormais prescrire directement des dispositifs médicaux (lits médicalisés, matériel de maintien à domicile, barres d'appui), pansements, orthèses et antalgiques de niveau 1.</div></li>
         <li><span class="n">2</span><div><b>« Mon Bilan Prévention » à 30 € pris en charge à 100 %</b>Ouvert officiellement aux kinés depuis le 1<sup>er</sup> octobre 2026, pris en charge à 100 % par l'Assurance Maladie sans aucune avance de frais pour le patient.</div></li>
@@ -364,7 +373,7 @@
         <h2 class="h-l" style="margin-top:2.2mm">Sortir du piège de la double journée administrative</h2>
         <p class="lead">Après de nombreux kilomètres de tournée sous la chaleur tropicale et des soins cliniques exigeants auprès des familles caribéennes, la soirée doit être préservée pour le repos et les proches. Pourquoi déléguer sa gestion administrative devient un impératif de santé et de sécurité pour les soignants libéraux :</p>
       </div>
-      <div class="photo r32"><img src="assets/photo-domicile.jpg" alt="Soin à domicile auprès d'une patiente âgée et de sa famille"></div>
+      <div class="photo r32"><img src="assets/photo-domicile.jpg" alt="Soignante auscultant un patient à son domicile"></div>
     </div>
     <div class="compare">
       <div class="without">
@@ -448,6 +457,7 @@
     <div class="signoff">HelpMed DOM • Guadeloupe • Martinique • Guyane • La Réunion &nbsp;|&nbsp; <em>« L'administratif c'est notre métier ! »</em></div>
   </section>
 
+  <p class="credits">Crédits photos : Kampus Production, cottonbro studio, Yan Krukau, Antoni Shkraba (Pexels).</p>
   <footer class="rfoot"><span>HelpMed DOM • Guadeloupe • Martinique • Guyane • La Réunion</span><span class="num">4 <span>/ 4</span></span></footer>
 </section>
 
