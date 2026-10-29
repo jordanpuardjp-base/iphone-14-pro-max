@@ -79,7 +79,7 @@
   .vigil p + p { margin-top: 1mm; }
 
   /* kiné block: sits under the complete Avenant 11 block */
-  .kine { display: grid; grid-template-columns: 1fr 46mm; gap: var(--gap); border-top: 1.2pt double var(--slate); padding-top: var(--gap); }
+  .kine { display: grid; grid-template-columns: 1fr 40mm; gap: var(--gap); border-top: 1.2pt double var(--slate); padding-top: var(--gap); }
   .kine .box { border: .6pt solid var(--line); border-top: 1.6pt solid var(--green); padding: var(--pad); margin-top: 2mm; display: flex; flex-direction: column; justify-content: space-between; gap: 2mm; }
   .kine .box b { display: block; font: 700 7.2pt/1.3 "Liberation Sans", sans-serif; }
   .kine .box b::before { content: "● "; color: var(--green); font-size: 6pt; }
@@ -110,6 +110,24 @@
   .excellence .box .kicker { color: var(--navy); font-size: 7.4pt; margin-bottom: 1.8mm; }
   .excellence .box p { text-align: left; }
   .excellence .box p + p { margin-top: 1.4mm; }
+
+  .premium { background: linear-gradient(135deg, #0a1b44 0%, #10316b 100%); color: #fff; border-radius: 1.5mm; border: .8pt solid #d9ae55; padding: 4mm; display: flex; flex-direction: column; gap: 3mm; }
+  .pm-top { display: grid; grid-template-columns: 74mm 1fr; gap: 4mm; align-items: center; }
+  .pm-top img { width: 100%; display: block; border-radius: 1mm; border: .6pt solid #d9ae55; }
+  .pm-kicker { font: 700 6.2pt/1.3 "Liberation Sans", sans-serif; text-transform: uppercase; color: #e8c37a; letter-spacing: .02em; }
+  .premium h2 { color: #fff; font-size: 12.5pt; margin-top: 1mm; }
+  .pm-sub { font-style: italic; color: #cfd9ee; margin-top: 1mm; text-align: left; }
+  .premium ul { list-style: none; margin-top: 1.6mm; }
+  .premium li { padding: .5mm 0; }
+  .premium li b { color: #f1cf8a; }
+  .premium li b::before { content: "✦ "; color: #e8c37a; }
+  .pm-three { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--gap); }
+  .pm-three div { background: rgba(255,255,255,.08); border: .6pt solid rgba(232,195,122,.55); border-top: 1.6pt solid #e8c37a; padding: var(--pad); }
+  .pm-three h3 { color: #f1cf8a; font-size: 9pt; margin-bottom: 1mm; }
+  .pm-three p { color: #e6ecf8; text-align: left; }
+  .pm-cta { text-align: center; background: linear-gradient(90deg, #c9973a, #f1cf8a, #c9973a); color: #0a1b44; font: 700 8.6pt/1.3 "Liberation Sans", sans-serif; padding: 2mm 3mm; border-radius: 1mm; }
+  .pm-cta b { text-transform: uppercase; letter-spacing: .03em; }
+  .teaser { margin-top: 1.4mm; font: 700 6.8pt/1.3 "Liberation Sans", sans-serif; color: #7a5a14; }
   .hub { display: grid; grid-template-columns: 1fr auto auto; gap: 6mm; align-items: center; border: .6pt solid var(--line); background: var(--bg); padding: var(--pad) 5mm; }
   .hub .kicker { color: var(--navy); font-size: 7.4pt; margin-bottom: 1mm; }
   .hub p { font-style: italic; color: var(--slate); text-align: left; }
@@ -177,7 +195,6 @@
       <div class="intro">
         <figure>
           <img src="assets/fig1.png" alt="Avenant 11 — Cap sur la nouvelle tarification IDEL">
-          <figcaption>Fig. 1 • L'Avenant 11 valorise enfin le temps clinique et sécurise les actes en tournée.</figcaption>
         </figure>
         <div>
           <div class="kicker">Dossier technique conventionnel • Veille stratégique IDEL</div>
@@ -236,6 +253,7 @@
         <b>• Traçabilité des pansements :</b> joindre obligatoirement une photo datée pour justifier la cotation du pansement lourd.<br>
         <b>• Ordonnances conformes :</b> vérifier systématiquement les dates de validité et les mentions de renouvellement.<br>
         <b>• Sécurisation HelpMed DOM :</b> notre coordinatrice administrative filtre et contrôle chaque dossier en amont pour garantir <b>zéro rejet et zéro indu caisse</b>.</p>
+        <div class="teaser">★ Découvrez en page 2 la Solution Premium HelpMed DOM, votre conciergerie clé en main →</div>
       </div>
     </section>
   </div>
@@ -253,7 +271,6 @@
     </div>
     <figure style="align-self:end">
       <img src="assets/kine.png" alt="Kinésithérapeute en clinique tropicale">
-      <figcaption>Fig. 2 • Kinésithérapeute en exercice coordonné en clinique tropicale des Caraïbes.</figcaption>
     </figure>
   </section>
 
@@ -267,7 +284,6 @@
   <section class="analyse">
     <figure>
       <img src="assets/fig2.png" alt="Soin à domicile aux Caraïbes">
-      <figcaption>Fig. 3 • Soin chaleureux à domicile des Caraïbes : préserver son temps pour le soin et la famille.</figcaption>
     </figure>
     <div>
       <div class="kicker">Analyse comparative • Soin &amp; famille dans les Caraïbes &amp; Outre-Mer</div>
@@ -297,31 +313,26 @@
     </div>
   </section>
 
-  <section>
-    <div class="premium-head">
-      <div class="kicker">Conciergerie médico-administrative haut de gamme</div>
-      <div class="kicker">Sécurité HDS certifiée • Conformité CGSS</div>
+  <section class="premium">
+    <div class="pm-top">
+      <img src="assets/premium.png" alt="HelpMed DOM — Solution Premium">
+      <div>
+        <div class="pm-kicker sans">Conciergerie médico-administrative haut de gamme • Sécurité HDS certifiée • Conformité CGSS</div>
+        <h2>ET POUR ALLER PLUS LOIN... LA SOLUTION PREMIUM HELPMED DOM</h2>
+        <p class="pm-sub">Une prise en charge intégrale, sécurisée et sur mesure pour éliminer définitivement toute charge mentale administrative :</p>
+        <ul>
+          <li><b>Libération totale de la charge mentale :</b> rentrez de tournée l'esprit serein, vos dossiers sont saisis et télétransmis au fil de l'eau.</li>
+          <li><b>Trésorerie 100 % sanctuarisée :</b> traitement exhaustif des rejets, conformité des pièces et encaissement rapide de chaque euro.</li>
+          <li><b>Expertise territoriale DOM :</b> maîtrise absolue des spécificités insulaires, de l'Avenant 11 et de la majoration de +20 %.</li>
+        </ul>
+      </div>
     </div>
-    <h2 style="font-size:13pt">ET POUR ALLER PLUS LOIN... LA SOLUTION PREMIUM HELPMED DOM</h2>
-    <p style="font-style:italic;color:var(--slate);margin-top:1mm">Une prise en charge intégrale, sécurisée et sur mesure pour éliminer définitivement toute charge mentale administrative :</p>
-    <div class="three">
+    <div class="pm-three">
       <div><h3>1. Saisie &amp; Télétransmission</h3><p>Intégration quotidienne proactive de vos ordonnances et tournées directement sur votre logiciel métier avec une rigueur conventionnelle et réglementaire absolue.</p></div>
       <div><h3>2. Traitement des Rejets</h3><p>Recouvrement actif et relance immédiate des caisses CGSS et mutuelles. Traitement rigoureux de chaque anomalie pour garantir zéro perte de trésorerie sur vos tournées.</p></div>
       <div><h3>3. Optimisation des Cotations</h3><p>Audit rigoureux de cotation, application stricte des majorations territoriales DOM (+20 %) et accompagnement personnalisé par votre coordinatrice administrative dédiée.</p></div>
     </div>
-  </section>
-
-  <section class="excellence">
-    <div class="box">
-      <div class="kicker sans">L'excellence médico-administrative au quotidien :</div>
-      <p><b>• Libération totale de la charge mentale :</b> rentrez de tournée l'esprit serein, vos dossiers sont saisis et télétransmis au fil de l'eau.</p>
-      <p><b>• Trésorerie 100 % sanctuarisée :</b> traitement exhaustif des rejets, conformité des pièces et encaissement rapide de chaque euro.</p>
-      <p><b>• Expertise territoriale DOM :</b> maîtrise absolue des spécificités insulaires, de l'Avenant 11 et de la majoration de +20 %.</p>
-    </div>
-    <figure>
-      <img src="assets/premium.png" alt="HelpMed DOM — Solution Premium">
-      <figcaption>Fig. 4 • La conciergerie administrative intégrale dédiée aux soignants d'Outre-Mer.</figcaption>
-    </figure>
+    <div class="pm-cta"><b>Premier contact offert</b> • Découvrez la Solution Premium et reprenez vos soirées dès cette semaine</div>
   </section>
 
   <section class="hub">
