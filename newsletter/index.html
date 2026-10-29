@@ -4,61 +4,9 @@
 <meta charset="utf-8">
 <title>Newsletter HelpMed DOM — Édition Spéciale N° 01 : Cap sur l'Avenant 11</title>
 <link rel="stylesheet" href="assets/fonts/fonts.css">
+<link rel="stylesheet" href="assets/theme.css">
 <style>
-  @page { size: A4; margin: 0; }
-  :root {
-    --ink: #2c2f34;          /* anthracite : titres, texte appuyé */
-    --ink-soft: #4a4e55;
-    --text: #3a3d43;
-    --muted: #777a81;
-    --gold: #8c6b37;         /* or lisible sur fond clair (texte) */
-    --gold-rule: #b8955c;    /* or des filets et chiffres */
-    --paper: #f5f5f2;        /* gris très clair des petits encadrés */
-    --panel: #ecebe7;        /* gris clair des grands blocs : une, comparatif, contact */
-    --navy: #14213d;         /* bleu nuit réservé à la Solution Premium */
-    --gold-light: #d2b783;   /* or sur fond bleu nuit */
-    --rule: #dddcd6;
-    --display: "HM Display", Georgia, serif;
-    --serif: "HM Serif", Georgia, serif;
-    --sans: "HM Sans", Arial, sans-serif;
-  }
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-  body { font-family: var(--sans); font-size: 8.6pt; line-height: 1.45; color: var(--text); background: #fff; font-kerning: normal; }
-  b, strong { font-weight: 600; color: var(--ink); }
-  sup { font-size: .68em; line-height: 0; vertical-align: .45em; }
-  ul, ol { list-style: none; }
-  img { display: block; }
-
-  .page { width: 210mm; height: 297mm; padding: 11mm 14mm 9mm; display: flex; flex-direction: column; overflow: hidden; break-after: page; }
-  .page:last-child { break-after: auto; }
-
-  /* ---------- éléments communs ---------- */
-  .rhead { display: flex; justify-content: space-between; align-items: baseline; padding-bottom: 2.2mm; border-bottom: .5pt solid var(--rule); margin-bottom: 7mm; font: 600 6.4pt/1 var(--sans); letter-spacing: .16em; text-transform: uppercase; color: var(--muted); }
-  .rhead .brand { font: italic 400 8.6pt/1 var(--serif); letter-spacing: 0; text-transform: none; color: var(--ink); }
-  .rfoot { margin-top: auto; padding-top: 2.4mm; border-top: .5pt solid var(--rule); display: flex; justify-content: space-between; align-items: baseline; font: 400 6.8pt/1.2 var(--sans); letter-spacing: .03em; color: var(--muted); }
-  .rfoot .num { font: 600 9pt/1 var(--serif); color: var(--ink); letter-spacing: 0; }
-  .rfoot .num span { font-weight: 400; color: var(--muted); }
-  .credits { margin-top: auto; padding-bottom: 1.6mm; font: italic 400 6.2pt/1.3 var(--sans); color: var(--muted); }
-  .credits + .rfoot { margin-top: 0; }
-
-  .kicker { display: flex; align-items: center; gap: 2.4mm; font: 600 6.6pt/1.25 var(--sans); letter-spacing: .16em; text-transform: uppercase; color: var(--gold); }
-  .kicker::before { content: ""; flex: none; width: 7mm; height: .8pt; background: var(--gold-rule); }
-
-  h1, h2, h3 { font-family: var(--serif); font-weight: 600; color: var(--ink); letter-spacing: -.01em; }
   .np-title, .h-xl, .h-l, .cover-panel h2, .premium h2, .ct-head h2 { font-family: var(--display); }
-  .h-xl { font-size: 25pt; line-height: 1.07; }
-  .h-l { font-size: 18pt; line-height: 1.12; }
-  .lead { font: italic 400 9.8pt/1.5 var(--serif); color: var(--ink-soft); }
-
-  .photo { position: relative; overflow: hidden; background: var(--paper); }
-  .photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
-  .r43 { aspect-ratio: 4 / 3; }
-  .r32 { aspect-ratio: 3 / 2; }
-
-  .points li { position: relative; padding-left: 4mm; }
-  .points li + li { margin-top: 1.6mm; }
-  .points li::before { content: ""; position: absolute; left: .4mm; top: 1.75mm; width: 1.4mm; height: 1.4mm; background: var(--gold-rule); transform: rotate(45deg); }
 
   /* ---------- page 1 : la une ---------- */
   .topline { display: flex; justify-content: space-between; font: 600 6.2pt/1 var(--sans); letter-spacing: .14em; text-transform: uppercase; color: var(--muted); padding-bottom: 2.4mm; border-bottom: .5pt solid var(--rule); }
@@ -75,7 +23,7 @@
   .cover-panel p { margin-top: 3mm; }
   .cover-panel .go { margin-top: auto; padding-top: 2.4mm; border-top: .5pt solid var(--gold-rule); font: 600 6.6pt/1 var(--sans); letter-spacing: .16em; text-transform: uppercase; color: var(--gold); }
 
-  .p3 .rhead { margin-bottom: 5.5mm; }
+  .p3 .rhead { margin-bottom: 5mm; }
   .p3 .compare { margin-bottom: 3mm; }
   .p1-main { display: grid; grid-template-columns: 1fr 55mm; gap: 8mm; margin-top: 7mm; }
   .edito-head { display: flex; justify-content: space-between; align-items: flex-end; gap: 4mm; padding-bottom: 3mm; border-bottom: .5pt solid var(--rule); }
@@ -357,7 +305,7 @@
       <div class="sub">3 avancées majeures</div>
     </div>
     <div class="kine-grid">
-      <div class="photo r32"><img src="assets/photo-kine.jpg" alt="Kinésithérapeute mobilisant la jambe d'une patiente sur table de soin"></div>
+      <div class="photo r32"><img src="assets/photo-kine.jpg" alt="Soignante accompagnant un patient âgé dans un exercice de mobilité, à domicile"></div>
       <ol class="adv">
         <li><span class="n">1</span><div><b>Élargissement du droit de prescription (Arrêté du 14 septembre 2026)</b>Les masseurs-kinésithérapeutes peuvent désormais prescrire directement des dispositifs médicaux (lits médicalisés, matériel de maintien à domicile, barres d'appui), pansements, orthèses et antalgiques de niveau 1.</div></li>
         <li><span class="n">2</span><div><b>« Mon Bilan Prévention » à 30 € pris en charge à 100 %</b>Ouvert officiellement aux kinés depuis le 1<sup>er</sup> octobre 2026, pris en charge à 100 % par l'Assurance Maladie sans aucune avance de frais pour le patient.</div></li>
@@ -373,7 +321,7 @@
         <h2 class="h-l" style="margin-top:2.2mm">Sortir du piège de la double journée administrative</h2>
         <p class="lead">Après de nombreux kilomètres de tournée sous la chaleur tropicale et des soins cliniques exigeants auprès des familles caribéennes, la soirée doit être préservée pour le repos et les proches. Pourquoi déléguer sa gestion administrative devient un impératif de santé et de sécurité pour les soignants libéraux :</p>
       </div>
-      <div class="photo r32"><img src="assets/photo-domicile.jpg" alt="Soignante auscultant un patient à son domicile"></div>
+      <div class="photo r32"><img src="assets/photo-domicile.jpg" alt="Soignant mesurant la tension d'une patiente à son domicile"></div>
     </div>
     <div class="compare">
       <div class="without">
@@ -457,28 +405,10 @@
     <div class="signoff">HelpMed DOM • Guadeloupe • Martinique • Guyane • La Réunion &nbsp;|&nbsp; <em>« L'administratif c'est notre métier ! »</em></div>
   </section>
 
-  <p class="credits">Crédits photos : Kampus Production, cottonbro studio, Yan Krukau, Antoni Shkraba (Pexels).</p>
+  <p class="credits">Crédits photos : Kampus Production, cottonbro studio, Antoni Shkraba (Pexels).</p>
   <footer class="rfoot"><span>HelpMed DOM • Guadeloupe • Martinique • Guyane • La Réunion</span><span class="num">4 <span>/ 4</span></span></footer>
 </section>
 
-<script>
-  // Typographie française : apostrophes, points de suspension, espaces insécables.
-  (function () {
-    var NB = " ", FINE = " ";
-    var walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
-    var node;
-    while ((node = walker.nextNode())) {
-      if (node.parentNode.nodeName === "SCRIPT") continue;
-      node.nodeValue = node.nodeValue
-        .replace(/'/g, "’")
-        .replace(/\.\.\./g, "…")
-        .replace(/«\s*/g, "«" + FINE)
-        .replace(/\s*»/g, FINE + "»")
-        .replace(/\s+:/g, NB + ":")
-        .replace(/\s+([;!?])/g, FINE + "$1")
-        .replace(/(\d)\s+(%|€)/g, "$1" + NB + "$2");
-    }
-  })();
-</script>
+<script src="assets/typo.js"></script>
 </body>
 </html>

@@ -1,0 +1,366 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Newsletter HelpMed DOM — Édition Spéciale N° 01 : Cap sur l'Avenant 11 (version 2 pages)</title>
+<link rel="stylesheet" href="assets/fonts/fonts.css">
+<link rel="stylesheet" href="assets/theme.css">
+<style>
+  /* Version compacte : même charte que la version 4 pages, échelle typographique resserrée. */
+  body { font-size: 7.4pt; line-height: 1.38; }
+  .page { padding: 8mm 11mm 6.5mm; }
+  .np-title, .h-l, .premium h2, .ct-head h2 { font-family: var(--display); }
+  .h-l { font-size: 13pt; line-height: 1.12; }
+  .lead { font-size: 8pt; line-height: 1.45; }
+  .kicker { font-size: 6pt; gap: 2mm; }
+  .kicker::before { width: 5mm; }
+  .points li { padding-left: 3.4mm; }
+  .points li + li { margin-top: 1mm; }
+  .points li::before { top: 1.45mm; width: 1.2mm; height: 1.2mm; }
+  .rhead { margin-bottom: 4.5mm; }
+  .rfoot { padding-top: 1.5mm; font-size: 6.2pt; }
+  .gap { flex: none; height: 4mm; }
+
+  /* ---------- page 1 ---------- */
+  .topline { display: flex; justify-content: space-between; font: 600 5.8pt/1 var(--sans); letter-spacing: .14em; text-transform: uppercase; color: var(--muted); padding-bottom: 2mm; border-bottom: .5pt solid var(--rule); }
+  .nameplate { display: grid; grid-template-columns: 1fr auto; align-items: end; gap: 6mm; padding: 2.6mm 0 2mm; }
+  .np-pre { font: 600 6.6pt/1 var(--sans); letter-spacing: .38em; text-transform: uppercase; color: var(--gold); }
+  .np-title { font-size: 23pt; line-height: .95; letter-spacing: -.02em; margin-top: 1.4mm; }
+  .np-tag { font: italic 400 8.2pt/1.3 var(--serif); color: var(--muted); margin-top: 1.2mm; }
+  .nameplate img { height: 13mm; mix-blend-mode: multiply; }
+  .np-rule { height: 3.2pt; border-top: 1.6pt solid var(--ink); border-bottom: .5pt solid var(--gold-rule); }
+
+  .p1-main { display: grid; grid-template-columns: 47mm 1fr; gap: 5.5mm; margin-top: 3mm; }
+  .edito { display: flex; flex-direction: column; border-right: .5pt solid var(--rule); padding-right: 5.5mm; }
+  .edito .kicker { letter-spacing: .1em; }
+  .edito .kicker::before { display: none; }
+  .edito h2 { font-size: 13pt; margin-top: 1mm; }
+  .byline { display: flex; align-items: center; gap: 2.4mm; margin-top: 2mm; padding: 1.8mm 0; border-top: .5pt solid var(--rule); border-bottom: .5pt solid var(--rule); }
+  .byline img { width: 12mm; height: 12mm; border-radius: 50%; object-fit: cover; border: 1pt solid #fff; box-shadow: 0 0 0 .6pt var(--gold-rule); }
+  .byline b { display: block; font: 600 8.4pt/1.2 var(--serif); }
+  .byline span { display: block; font-size: 6.6pt; line-height: 1.25; color: var(--muted); }
+  .pull { position: relative; margin: 2.4mm 0 2.2mm; padding-left: 5mm; font: italic 400 7.9pt/1.4 var(--serif); color: var(--ink); }
+  .pull::before { content: "«"; position: absolute; left: 0; top: -1.2mm; font: 600 16pt/1 var(--display); color: var(--gold-rule); }
+  .pull::after { content: " »"; }
+  .edito-body { font-size: 7.15pt; line-height: 1.36; text-align: left; hyphens: auto; hyphenate-limit-chars: 6 3 2; }
+  .edito-body p + p { margin-top: 1.1mm; }
+  .edito-body .salut { font-weight: 600; color: var(--ink); text-align: left; hyphens: manual; }
+  .sign { text-align: right !important; font: italic 600 8.6pt/1.2 var(--serif); color: var(--ink); margin-top: 1.8mm !important; }
+  .figs { display: grid; grid-template-columns: 25mm repeat(6, 1fr); margin-top: 2.6mm; background: var(--paper); }
+  .figs > div { padding: 1.6mm 2.4mm; border-left: .5pt solid var(--rule); display: flex; flex-direction: column; justify-content: center; }
+  .figs .figs-title { border-left: 0; padding-left: 3mm; }
+  .figs h3 { font-size: 10pt; margin-top: .8mm; }
+  .fig b { font: 600 11.5pt/1 var(--serif); white-space: nowrap; }
+  .fig span { font-size: 6.2pt; line-height: 1.22; margin-top: .8mm; }
+
+  .dossier { display: flex; flex-direction: column; min-width: 0; }
+  .dossier-head { display: grid; grid-template-columns: 1fr 36mm; gap: 5mm; align-items: end; }
+  .dossier-head h2 { font-size: 14pt; line-height: 1.1; margin: 1.2mm 0 1.4mm; }
+  .dossier-head .lead { font-size: 7.3pt; line-height: 1.4; }
+  .reforms { display: grid; grid-template-columns: 1fr 1fr; gap: 4.5mm; margin-top: 2.4mm; }
+  .stack { display: flex; flex-direction: column; gap: 2.6mm; }
+  .reform { flex: 1 1 auto; display: flex; flex-direction: column; gap: 1mm; border-top: 1.3pt solid var(--ink); padding-top: 1.5mm; font-size: 6.7pt; line-height: 1.31; }
+  .reform-top { display: flex; align-items: baseline; gap: 1.8mm; flex-wrap: wrap; }
+  .reform-top .no { font: 300 12pt/1 var(--display); color: var(--gold-rule); }
+  .reform-top .lab { font: 700 5.8pt/1.25 var(--sans); letter-spacing: .14em; text-transform: uppercase; color: var(--ink); }
+  .reform-top .meta { font: 600 6.2pt/1.25 var(--sans); color: var(--gold); }
+  .reform-top .meta::before { content: "— "; color: var(--gold-rule); }
+  .reform h3 { font-size: 8.4pt; line-height: 1.18; }
+  .reform .ex { background: var(--paper); border-left: 1pt solid var(--gold-rule); padding: 1.1mm 2mm; font-style: italic; color: var(--ink-soft); }
+  .reform .ex span, .reform .impact em { font: 700 5.6pt/1.3 var(--sans); font-style: normal; letter-spacing: .12em; text-transform: uppercase; color: var(--gold); margin-right: 1.2mm; }
+  .reform .impact { margin-top: auto; padding-top: 1.2mm; border-top: .5pt solid var(--rule); font-weight: 600; color: var(--ink); }
+  .tarifs li { display: flex; justify-content: space-between; gap: 2mm; padding: .4mm 0; border-bottom: .5pt dotted #cbbf9f; }
+  .tarifs li b { white-space: nowrap; }
+  .vigil { margin-top: 2.4mm; background: var(--paper); border-left: 1.6pt solid var(--ink); padding: 2.2mm 3.2mm; font-size: 6.7pt; line-height: 1.31; }
+  .vigil-head { display: flex; align-items: baseline; gap: 3mm; }
+  .vigil h3 { font-size: 9pt; }
+  .vigil > p { margin-top: .8mm; }
+  .vigil .points { display: grid; grid-template-columns: repeat(3, 1fr); gap: 3.6mm; margin-top: 1.2mm; }
+  .vigil .points li + li { margin-top: 0; }
+
+  .kine { display: grid; grid-template-columns: 1fr 38mm; gap: 5mm; align-items: end; margin-top: 2.8mm; margin-bottom: 1.6mm; padding-top: 2.4mm; border-top: 1.6pt solid var(--ink); }
+  .kine-head { display: flex; justify-content: space-between; align-items: baseline; gap: 4mm; margin-top: 1mm; }
+  .kine-head .sub { font: italic 400 9pt/1.2 var(--serif); color: var(--gold); white-space: nowrap; }
+  .adv { display: grid; grid-template-columns: 1.25fr 1fr 1fr; gap: 3.6mm; margin-top: 1.8mm; font-size: 6.7pt; line-height: 1.31; }
+  .adv li { display: grid; grid-template-columns: 4mm 1fr; gap: 1mm; }
+  .adv .n { font: 300 12pt/1 var(--display); color: var(--gold-rule); }
+  .adv b { display: block; font: 600 7.7pt/1.25 var(--serif); margin-bottom: .5mm; }
+
+  /* ---------- page 2 ---------- */
+  .analyse { display: grid; grid-template-columns: 58mm 1fr; gap: 6mm; align-items: center; }
+  .analyse h2 { margin: 1.4mm 0 1.6mm; }
+  .analyse .lead { font-size: 7.7pt; }
+  .compare { display: grid; grid-template-columns: 1fr 1fr; margin-top: 4mm; font-size: 7.1pt; line-height: 1.34; }
+  .compare > div { padding: 2.8mm 4mm 3mm; }
+  .compare .without { border: .5pt solid var(--rule); border-right: 0; }
+  .compare .with { background: var(--panel); border-top: 2pt solid var(--gold-rule); }
+  .compare .tag { font: 700 6pt/1 var(--sans); letter-spacing: .16em; text-transform: uppercase; color: var(--muted); }
+  .compare .with .tag { color: var(--gold); }
+  .compare h3 { font-size: 10pt; margin: 1mm 0 .4mm; }
+  .compare li { position: relative; padding-left: 4.2mm; margin-top: 1.1mm; }
+  .compare .without li::before { content: ""; position: absolute; left: 0; top: 2mm; width: 2.2mm; height: .8pt; background: #a3aab8; }
+  .compare .with li::before { content: ""; position: absolute; left: .5mm; top: .8mm; width: 1.1mm; height: 2.1mm; border-right: 1pt solid var(--gold-rule); border-bottom: 1pt solid var(--gold-rule); transform: rotate(40deg); }
+
+  .premium { margin-top: 4.6mm; background: var(--navy); color: #d6dceb; border-top: 2pt solid var(--gold-rule); padding: 4.4mm 6mm 4mm; }
+  .premium .kicker { color: var(--gold-light); }
+  .premium .kicker::before { background: var(--gold-light); }
+  .premium h2, .premium h3, .premium .ex-title { color: #fff; }
+  .premium b { color: var(--gold-light); }
+  .pm-head { display: flex; justify-content: space-between; align-items: center; }
+  .pm-cert { font: 600 5.8pt/1 var(--sans); letter-spacing: .14em; text-transform: uppercase; color: #aab6cf; }
+  .premium h2 { font-size: 16pt; line-height: 1.1; margin-top: 2mm; }
+  .premium .lead { color: #c9d2e5; margin-top: 1.4mm; }
+  .pm-body { display: grid; grid-template-columns: 70mm 1fr; gap: 6mm; align-items: center; margin-top: 3mm; }
+  .pm-body img { width: 100%; height: auto; }
+  .ex-title { font: 600 9.4pt/1.25 var(--serif); padding-bottom: 1.4mm; margin-bottom: .8mm; border-bottom: .5pt solid rgba(210,183,131,.45); }
+  .premium .points li + li { margin-top: 1.4mm; }
+  .premium .points li::before { background: var(--gold-light); }
+  .services { display: grid; grid-template-columns: repeat(3, 1fr); gap: 5mm; margin-top: 3.2mm; padding-top: 2.8mm; border-top: .5pt solid rgba(210,183,131,.45); font-size: 7pt; line-height: 1.35; }
+  .services .no { font: 300 15pt/1 var(--display); color: var(--gold-light); }
+  .services h3 { font-size: 9pt; margin: 1mm 0 .8mm; }
+
+  .partners { padding: 3.6mm 0; }
+  .partners-row { display: grid; grid-template-columns: 1fr auto auto; gap: 8mm; align-items: center; margin-top: 1.4mm; }
+  .partners p { font: italic 400 8pt/1.42 var(--serif); color: var(--ink-soft); }
+  .partners figure { text-align: center; font-size: 6.4pt; line-height: 1.25; color: var(--muted); }
+  .partners figure img { height: 8mm; width: auto; margin: 0 auto 1.2mm; mix-blend-mode: multiply; }
+
+  .contact { background: var(--panel); border-top: 2pt solid var(--gold-rule); padding: 3.4mm 6mm 2.6mm; }
+  .ct-grid { display: grid; grid-template-columns: 64mm 1fr; gap: 6mm; align-items: center; }
+  .ct-head { border-right: .5pt solid var(--gold-rule); padding-right: 5mm; }
+  .ct-head h2 { font-size: 15pt; font-style: italic; line-height: 1.1; margin-top: 1.2mm; }
+  .ct-head p { margin-top: 1.4mm; }
+  .channels { display: grid; grid-template-columns: auto auto; justify-content: space-between; gap: 3mm 5mm; }
+  .ch { display: flex; align-items: center; gap: 2.4mm; }
+  .ico { flex: none; width: 7.4mm; height: 7.4mm; border: .8pt solid var(--gold-rule); border-radius: 50%; display: flex; align-items: center; justify-content: center; }
+  .ico svg { width: 3.7mm; height: 3.7mm; fill: none; stroke: var(--gold); stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+  .ch i { display: block; font: 700 5.4pt/1.2 var(--sans); font-style: normal; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
+  .ch b { display: block; font: 600 8.4pt/1.3 var(--sans); color: var(--ink); white-space: nowrap; }
+  .signoff { display: flex; align-items: center; gap: 3mm; margin-top: 2.6mm; font: 600 6.2pt/1.3 var(--sans); letter-spacing: .04em; color: var(--gold); white-space: nowrap; }
+  .signoff::before, .signoff::after { content: ""; flex: 1; height: .5pt; background: var(--gold-rule); }
+  .signoff em { font: italic 400 7.6pt/1 var(--serif); color: var(--ink); letter-spacing: 0; }
+  .credits { font-size: 5.8pt; padding-bottom: 1.2mm; }
+</style>
+</head>
+<body>
+
+<!-- ===================== PAGE 1 ===================== -->
+<section class="page p1">
+  <div class="topline"><span>L'information médico-administrative des professions de santé libérales en Outre-Mer</span><span>Édition trimestrielle • Novembre 2026 • N° 01</span></div>
+
+  <header class="nameplate">
+    <div>
+      <div class="np-pre">La Newsletter des</div>
+      <h1 class="np-title">Soignants Libéraux</h1>
+      <div class="np-tag">L'information médico-administrative en Outre-Mer</div>
+    </div>
+    <img src="assets/logo.png" alt="HelpMed DOM — L'administratif, c'est notre métier !">
+  </header>
+  <div class="np-rule"></div>
+  <div class="figs">
+    <div class="figs-title"><div class="kicker">Chiffres clés</div><h3>Avenant 11</h3></div>
+    <div class="fig"><b>+20 %</b><span>Majoration territoriale légale</span></div>
+    <div class="fig"><b>4,02 €</b><span>AMI revalorisé dans les DOM</span></div>
+    <div class="fig"><b>100 %</b><span>Rémunération du 2<sup>nd</sup> acte technique</span></div>
+    <div class="fig"><b>5,00 €</b><span>MCI pansements lourds &amp; complexes</span></div>
+    <div class="fig"><b>24,00 €</b><span>Consultation ALD dans les DOM</span></div>
+    <div class="fig"><b>2027</b><span>CPS propre obligatoire remplaçants</span></div>
+  </div>
+
+  <div class="p1-main">
+    <article class="edito">
+      <div class="kicker">Chronique de la fondatrice</div>
+      <h2>L'éditorial</h2>
+      <div class="byline">
+        <img src="assets/portrait.png" alt="Célia de la Reberdière">
+        <div><b>Célia de la Reberdière</b><span>Fondatrice &amp; Dirigeante, HelpMed DOM</span></div>
+      </div>
+      <blockquote class="pull">Chaque matin dès l'aube, vous sillonnez nos territoires d'Outre-Mer avec dévouement. Notre mission est de veiller sur chaque euro gagné et de vous libérer de la double journée administrative.</blockquote>
+      <div class="edito-body">
+        <p class="salut">Chères infirmières, chers soignants libéraux d'Outre-Mer,</p>
+        <p>De Grande-Terre aux mornes de Basse-Terre, de Fort-de-France aux anses de Martinique, des rives de Guyane aux cirques de La Réunion, vous incarnez le maillon irremplaçable du soin au chevet de nos patients, bravant la chaleur et l'intensité des tournées quotidiennes.</p>
+        <p>Cette rentrée conventionnelle est marquée par <b>l'Avenant 11</b>. La revalorisation de la lettre-clé AMI, la rémunération à 100 % du second acte et la création du statut d'Infirmier Référent ALD constituent des victoires professionnelles majeures, consolidées par notre <b>majoration territoriale légale de +20 %</b>.</p>
+        <p>Mais ces opportunités s'accompagnent d'un durcissement des contrôles des caisses CGSS. Face au risque permanent de rejet et d'indu, vous ne devez plus sacrifier vos soirées ni votre repos indispensable.</p>
+        <p>HelpMed DOM a été bâti pour vous : nous sommes votre bouclier médico-administratif rigoureux, garantissant une facturation sécurisée au centime près et une gestion proactive.</p>
+        <p class="sign">Célia de la Reberdière</p>
+      </div>
+    </article>
+
+    <section class="dossier">
+      <header class="dossier-head">
+        <div>
+          <div class="kicker">Dossier technique conventionnel • Veille stratégique IDEL</div>
+          <h2>L'Avenant 11 : la nouvelle ère des soignants libéraux</h2>
+          <p class="lead">Signé entre l'Assurance Maladie et les syndicats représentatifs, l'Avenant 11 transforme en profondeur l'exercice et la tarification des soignants libéraux. Décryptage exclusif des quatre réformes clés et de leur impact immédiat avec la majoration territoriale légale de +20 % dans les départements d'Outre-Mer.</p>
+        </div>
+        <div class="photo r43"><img src="assets/photo-dossier.jpg" alt="Soignante en tenue réalisant un bandage"></div>
+      </header>
+
+      <div class="reforms">
+        <div class="stack">
+          <article class="reform">
+            <div class="reform-top"><span class="no">01</span><div><div class="lab">Tarification actes</div><div class="meta">AMI 4,02 € dans les DOM</div></div></div>
+            <h3>Revalorisation de la lettre-clé AMI &amp; Règle du cumul</h3>
+            <p>Dans les DOM, la lettre-clé AMI atteint <b>4,02 €</b> grâce à la majoration territoriale légale de <b>+20 %</b>. Avancée majeure : le deuxième acte technique réalisé lors d'un même passage est désormais <b>rémunéré à 100 %</b> (fin du demi-tarif à 50 %).</p>
+            <p class="ex"><span>Exemple</span>Prise de sang (AMI 1,5) + Pansement simple (AMI 2) = 100 % des deux actes valorisés à <b>4,02 € l'unité</b>.</p>
+            <p class="impact"><em>Impact DOM</em>Gain net direct de +15 % à +25 % par tournée pour les IDEL d'Outre-Mer sans allonger le temps de soin.</p>
+          </article>
+          <article class="reform">
+            <div class="reform-top"><span class="no">02</span><div><div class="lab">Dépendance &amp; soins</div><div class="meta">Forfaits BSI DOM sécurisés</div></div></div>
+            <h3>Généralisation du BSI à l'ensemble des patients</h3>
+            <p>Clôture définitive de la DSI papier. Application exclusive de la grille tarifaire officielle des forfaits journaliers BSI dans les DOM :</p>
+            <ul class="tarifs">
+              <li><span>Forfait prise en charge légère (BSA DOM)</span><b>13,25 € / jour</b></li>
+              <li><span>Forfait prise en charge intermédiaire (BSB DOM)</span><b>18,55 € / jour</b></li>
+              <li><span>Forfait prise en charge lourde (BSC DOM)</span><b>29,25 € / jour</b></li>
+            </ul>
+            <p>Traçabilité numérique obligatoire de chaque passage.</p>
+            <p class="ex"><span>Clé de gestion</span>Évaluation clinique rigoureuse pour sécuriser le niveau de forfait sans risque de déclassement caisse.</p>
+            <p class="impact"><em>Impact DOM</em>Trésorerie mensualisée stable et sécurisée sur les prises en charge de dépendance lourde.</p>
+          </article>
+        </div>
+        <div class="stack">
+          <article class="reform">
+            <div class="reform-top"><span class="no">03</span><div><div class="lab">Soins spécifiques</div><div class="meta">Dispositions au 1<sup>er</sup> janvier 2027</div></div></div>
+            <h3>Pansements : Accès direct, Bilan AMI 3,48 &amp; MCI</h3>
+            <ul class="points">
+              <li><b>Accès direct dès le 1<sup>er</sup> janvier 2027 :</b> prise en charge et facturation en autonomie des pansements de plaies non chirurgicales (plaies aiguës, chroniques, ulcères, escarres) sans prescription médicale préalable.</li>
+              <li><b>Bilan annuel de plaie à risque :</b> nouvelle cotation <b>AMI 3,48</b> effective au 1<sup>er</sup> janvier 2027 (un bilan annuel par patient, pansement inclus, compte-rendu versé au DMP).</li>
+              <li><b>Traçabilité CGSS :</b> maintien strict de la majoration <b>MCI à 5,00 €</b> par passage et rappel strict de l'obligation des photos datées pour bloquer les indus et rejets caisse.</li>
+            </ul>
+            <p class="ex"><span>Exemple</span>AMI 4 (16,08 € DOM) + MCI (5,00 €) + IFI/IK = acte hautement valorisé et sécurisé.</p>
+            <p class="impact"><em>Impact DOM</em>Reconnaissance financière juste des soins chroniques lourds et autonomie de prescription renforcée.</p>
+          </article>
+          <article class="reform">
+            <div class="reform-top"><span class="no">04</span><div><div class="lab">Chroniques &amp; ALD</div><div class="meta">24,00 € consultation DOM</div></div></div>
+            <h3>Statut d'Infirmier Référent &amp; consultations cliniques</h3>
+            <p>Consécration de l'IDEL dans le suivi des Affections de Longue Durée (ALD). Deux consultations cliniques autonomes sont valorisées à <b>24,00 € dans les DOM</b> (majoration légale +20 %) : accompagnement diabétique (CIA) et bilan prévention (CIB).</p>
+            <p class="ex"><span>Statut d'Infirmier Référent</span>Rémunération dédiée de l'éducation thérapeutique et de la coordination au domicile.</p>
+            <p class="impact"><em>Impact DOM</em>Diversification des revenus et valorisation pérenne de l'expertise clinique.</p>
+          </article>
+        </div>
+      </div>
+
+      <section class="vigil">
+        <div class="vigil-head"><div class="kicker">Le point de vigilance</div><h3>CGSS : zéro rejet</h3></div>
+        <p>Face au durcissement des contrôles des caisses CGSS en Guadeloupe, Martinique, Guyane et à La Réunion, la rigueur de cotation est vitale :</p>
+        <ul class="points">
+          <li><b>Traçabilité des pansements :</b> joindre obligatoirement une photo datée pour justifier la cotation du pansement lourd.</li>
+          <li><b>Ordonnances conformes :</b> vérifier systématiquement les dates de validité et les mentions de renouvellement.</li>
+          <li><b>Sécurisation HelpMed DOM :</b> notre coordinatrice administrative filtre et contrôle chaque dossier en amont pour garantir <b>zéro rejet et zéro indu caisse</b>.</li>
+        </ul>
+      </section>
+    </section>
+  </div>
+
+  <!-- Veille kiné : sous l'intégralité du bloc Avenant 11 -->
+  <section class="kine">
+    <div>
+      <div class="kicker">Veille stratégique kinésithérapie • Focus conventionnel &amp; réglementaire</div>
+      <div class="kine-head"><h2 class="h-l">Nouveau focus : veille stratégique kiné</h2><span class="sub">3 avancées majeures</span></div>
+      <ol class="adv">
+        <li><span class="n">1</span><div><b>Élargissement du droit de prescription (Arrêté du 14 septembre 2026)</b>Les masseurs-kinésithérapeutes peuvent désormais prescrire directement des dispositifs médicaux (lits médicalisés, matériel de maintien à domicile, barres d'appui), pansements, orthèses et antalgiques de niveau 1.</div></li>
+        <li><span class="n">2</span><div><b>« Mon Bilan Prévention » à 30 € pris en charge à 100 %</b>Ouvert officiellement aux kinés depuis le 1<sup>er</sup> octobre 2026, pris en charge à 100 % par l'Assurance Maladie sans aucune avance de frais pour le patient.</div></li>
+        <li><span class="n">3</span><div><b>Accès direct en exercice coordonné (Loi Rist)</b>Prise en charge directe jusqu'à 8 séances sans ordonnance médicale préalable au sein des structures d'exercice coordonné (CPTS, MSP et ESP).</div></li>
+      </ol>
+    </div>
+    <div class="photo r32"><img src="assets/photo-kine.jpg" alt="Soignante accompagnant un patient âgé dans un exercice de mobilité, à domicile"></div>
+  </section>
+
+  <footer class="rfoot"><span>HelpMed DOM • Guadeloupe • Martinique • Guyane • La Réunion</span><span class="num">1 <span>/ 2</span></span></footer>
+</section>
+
+<!-- ===================== PAGE 2 ===================== -->
+<section class="page p2">
+  <div class="rhead"><span class="brand">La Newsletter des Soignants Libéraux</span><span>Analyse • Solution Premium • Contact</span></div>
+
+  <section class="analyse">
+    <div class="photo r32"><img src="assets/photo-domicile.jpg" alt="Soignant mesurant la tension d'une patiente à son domicile"></div>
+    <div>
+      <div class="kicker">Analyse comparative • Soin &amp; famille dans les Caraïbes &amp; Outre-Mer</div>
+      <h2 class="h-l">Sortir du piège de la double journée administrative</h2>
+      <p class="lead">Après de nombreux kilomètres de tournée sous la chaleur tropicale et des soins cliniques exigeants auprès des familles caribéennes, la soirée doit être préservée pour le repos et les proches. Pourquoi déléguer sa gestion administrative devient un impératif de santé et de sécurité pour les soignants libéraux :</p>
+    </div>
+  </section>
+
+  <section class="compare">
+    <div class="without">
+      <div class="tag">Sans HelpMed DOM</div>
+      <h3>La surcharge administrative</h3>
+      <ul>
+        <li><b>Des heures interminables de paperasse :</b> tri fastidieux d'ordonnances, recherche de pièces justificatives et saisies manuelles répétitives après la tournée.</li>
+        <li><b>Rejets qui s'accumulent :</b> les anomalies de télétransmission et rejets caisses s'accumulent au rythme du volume de votre patientèle, créant des impayés chroniques.</li>
+        <li><b>Fatigue routière et climat :</b> 50 à 80 km de tournée sous forte chaleur et embouteillages denses (RN1/RN2 en Guadeloupe, rocade Fort-de-France, La Réunion).</li>
+        <li><b>Charge mentale constante :</b> stress permanent qui compromet la tranquillité d'esprit et empiète sur les week-ends et la vie de famille.</li>
+      </ul>
+    </div>
+    <div class="with">
+      <div class="tag">Avec HelpMed DOM</div>
+      <h3>La sérénité retrouvée</h3>
+      <ul>
+        <li><b>Sérénité totale retrouvée :</b> rentrez l'esprit 100 % libéré. Votre chaîne médico-administrative est prise en charge de bout en bout avec une rigueur absolue.</li>
+        <li><b>Tournées intégrées de façon proactive :</b> vos tournées sont saisies et validées directement sur votre logiciel par votre coordinatrice administrative dédiée.</li>
+        <li><b>Soirées et temps libre 100 % préservés :</b> consacrez vos soirées et vos week-ends à vos proches, à vos loisirs et à un repos pleinement mérité.</li>
+        <li><b>Rémunération sanctuarisée :</b> valorisation à taux plein de chaque acte, application des +20 % territoriaux et trésorerie protégée en continu.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="premium">
+    <div class="pm-head">
+      <div class="kicker">Conciergerie médico-administrative haut de gamme</div>
+      <div class="pm-cert">Sécurité HDS certifiée • Conformité CGSS</div>
+    </div>
+    <h2>Et pour aller plus loin... la Solution Premium HelpMed DOM</h2>
+    <p class="lead">Une prise en charge intégrale, sécurisée et sur mesure pour éliminer définitivement toute charge mentale administrative :</p>
+    <div class="pm-body">
+      <img src="assets/premium.png" alt="HelpMed DOM — Solution Premium, l'excellence médico-administrative">
+      <div>
+        <div class="ex-title">L'excellence médico-administrative au quotidien</div>
+        <ul class="points">
+          <li><b>Libération totale de la charge mentale :</b> rentrez de tournée l'esprit serein, vos dossiers sont saisis et télétransmis au fil de l'eau.</li>
+          <li><b>Trésorerie 100 % sanctuarisée :</b> traitement exhaustif des rejets, conformité des pièces et encaissement rapide de chaque euro.</li>
+          <li><b>Expertise territoriale DOM :</b> maîtrise absolue des spécificités insulaires, de l'Avenant 11 et de la majoration de +20 %.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="services">
+      <div><span class="no">01</span><h3>Saisie &amp; Télétransmission</h3><p>Intégration quotidienne proactive de vos ordonnances et tournées directement sur votre logiciel métier avec une rigueur conventionnelle et réglementaire absolue.</p></div>
+      <div><span class="no">02</span><h3>Traitement des Rejets</h3><p>Recouvrement actif et relance immédiate des caisses CGSS et mutuelles. Traitement rigoureux de chaque anomalie pour garantir zéro perte de trésorerie sur vos tournées.</p></div>
+      <div><span class="no">03</span><h3>Optimisation des Cotations</h3><p>Audit rigoureux de cotation, application stricte des majorations territoriales DOM (+20 %) et accompagnement personnalisé par votre coordinatrice administrative dédiée.</p></div>
+    </div>
+  </section>
+
+  <section class="partners">
+    <div class="kicker">Un hub digital ultra-sécurisé • Partenariats privilégiés</div>
+    <div class="partners-row">
+      <p>HelpMed DOM orchestre votre écosystème avec les technologies soignantes de référence : hébergement certifié Données de Santé (HDS) et interconnexion native avec votre logiciel de facturation.</p>
+      <figure><img src="assets/wimi.png" alt="WIMI"><figcaption>Cloud Sécurisé HDS Français</figcaption></figure>
+      <figure><img src="assets/ozzen.png" alt="ozzen"><figcaption>Télétransmission &amp; Facturation IDEL</figcaption></figure>
+    </div>
+  </section>
+
+  <section class="contact">
+    <div class="ct-grid">
+      <div class="ct-head">
+        <div class="kicker">Votre premier échange</div>
+        <h2>Premier contact offert</h2>
+        <p>pour une évaluation de votre gestion administrative. Échangeons sur votre organisation de tournée et sécurisons ensemble 100 % de votre trésorerie de cabinet.</p>
+      </div>
+      <div class="channels">
+        <div class="ch"><span class="ico"><svg viewBox="0 0 24 24"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/></svg></span><div><i>Mobile &amp; WhatsApp</i><b>0690 71 45 71</b></div></div>
+        <div class="ch"><span class="ico"><svg viewBox="0 0 24 24"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2z"/></svg></span><div><i>Agence conseil</i><b>0590 26 25 89</b></div></div>
+        <div class="ch"><span class="ico"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span><div><i>Courriel</i><b>contact@helpmed-dom.fr</b></div></div>
+        <div class="ch"><span class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg></span><div><i>Portail soignants</i><b>helpmed-dom.fr</b></div></div>
+      </div>
+    </div>
+    <div class="signoff">HelpMed DOM • Guadeloupe • Martinique • Guyane • La Réunion &nbsp;|&nbsp; <em>« L'administratif c'est notre métier ! »</em></div>
+  </section>
+
+  <p class="credits">Crédits photos : Kampus Production, cottonbro studio, Antoni Shkraba (Pexels).</p>
+  <footer class="rfoot"><span>HelpMed DOM • Guadeloupe • Martinique • Guyane • La Réunion</span><span class="num">2 <span>/ 2</span></span></footer>
+</section>
+
+<script src="assets/typo.js"></script>
+</body>
+</html>
