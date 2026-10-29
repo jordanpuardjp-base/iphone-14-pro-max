@@ -111,37 +111,37 @@
   .excellence .box p { text-align: left; }
   .excellence .box p + p { margin-top: 1.4mm; }
 
-  .premium { background: linear-gradient(135deg, #0a1b44 0%, #10316b 100%); color: #fff; border-radius: 1.5mm; border: .8pt solid #d9ae55; padding: 4mm; display: flex; flex-direction: column; gap: 3mm; }
+  .premium { background: #0f1f45; color: #fff; border-radius: 0; border-top: 2pt solid #c9a45a; padding: 4mm; display: flex; flex-direction: column; gap: 3mm; }
   .pm-top { display: grid; grid-template-columns: 74mm 1fr; gap: 4mm; align-items: center; }
-  .pm-top img { width: 100%; display: block; border-radius: 1mm; border: .6pt solid #d9ae55; }
+  .pm-top img { width: 100%; display: block; }
   .pm-kicker { font: 700 6.2pt/1.3 "Liberation Sans", sans-serif; text-transform: uppercase; color: #e8c37a; letter-spacing: .02em; }
   .premium h2 { color: #fff; font-size: 12.5pt; margin-top: 1mm; }
   .pm-sub { font-style: italic; color: #cfd9ee; margin-top: 1mm; text-align: left; }
   .premium ul { list-style: none; margin-top: 1.6mm; }
   .premium li { padding: .5mm 0; }
   .premium li b { color: #f1cf8a; }
-  .premium li b::before { content: "✦ "; color: #e8c37a; }
+  .premium li b::before { content: "• "; color: #e8c37a; }
   .pm-three { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--gap); }
-  .pm-three div { background: rgba(255,255,255,.08); border: .6pt solid rgba(232,195,122,.55); border-top: 1.6pt solid #e8c37a; padding: var(--pad); }
+  .pm-three div { background: rgba(255,255,255,.06); border: .6pt solid rgba(255,255,255,.22); border-top: 1.2pt solid #c9a45a; padding: var(--pad); }
   .pm-three h3 { color: #f1cf8a; font-size: 9pt; margin-bottom: 1mm; }
   .pm-three p { color: #e6ecf8; text-align: left; }
   .pm-cta { text-align: center; background: linear-gradient(90deg, #c9973a, #f1cf8a, #c9973a); color: #0a1b44; font: 700 8.6pt/1.3 "Liberation Sans", sans-serif; padding: 2mm 3mm; border-radius: 1mm; }
   .pm-cta b { text-transform: uppercase; letter-spacing: .03em; }
-  .teaser { margin-top: 1.4mm; font: 700 6.8pt/1.3 "Liberation Sans", sans-serif; color: #7a5a14; }
-  .contact { position: relative; overflow: hidden; color: #fff; border-radius: 1.5mm; padding: 3.6mm 6mm 2.6mm; background: radial-gradient(circle at 92% 0%, rgba(214,40,40,.55) 0, rgba(214,40,40,0) 38%), radial-gradient(circle at 0% 100%, rgba(232,195,122,.35) 0, rgba(232,195,122,0) 40%), linear-gradient(120deg, #07142f 0%, #0f2c63 100%); }
+  .teaser { margin-top: 1.4mm; font: 700 6.8pt/1.3 "Liberation Sans", sans-serif; color: var(--slate); font-style: italic; }
+  .contact { border-top: 1.6pt solid var(--navy); border-bottom: .6pt solid var(--line); background: var(--bg); padding: 4mm 5mm 3mm; }
   .ct-head { text-align: center; }
-  .ct-badge { display: inline-block; background: var(--red); color: #fff; font-weight: 700; font-size: 6.6pt; text-transform: uppercase; letter-spacing: .08em; padding: .8mm 3mm; border-radius: 10mm; }
-  .ct-title { font-size: 13.5pt; line-height: 1.2; font-weight: 700; font-style: italic; margin-top: 2mm; }
-  .ct-sub { text-align: center; color: #cfd9ee; margin-top: 1.2mm; }
-  .channels { display: grid; grid-template-columns: 1fr 1fr; gap: 2.2mm; margin-top: 3mm; }
-  .ch { display: flex; align-items: center; gap: 3mm; background: rgba(255,255,255,.1); border: .6pt solid rgba(255,255,255,.28); border-radius: 10mm; padding: 1mm 4mm 1mm 1.4mm; }
-  .ico { flex: none; width: 8mm; height: 8mm; border-radius: 50%; background: var(--red); display: flex; align-items: center; justify-content: center; }
-  .ico.wa { background: #25a244; }
-  .ico svg { width: 5mm; height: 5mm; stroke: #fff; fill: none; stroke-width: 1.7; }
-  .ch i { display: block; font-size: 6.6pt; color: #e8c37a; text-transform: uppercase; letter-spacing: .05em; font-style: normal; font-family: "Liberation Sans", sans-serif; font-weight: 700; }
-  .ch b { display: block; font: 700 10.5pt/1.2 "Liberation Sans", sans-serif; }
-  .signoff { margin-top: 2.6mm; text-align: center; font: 700 7.4pt/1.3 "Liberation Sans", sans-serif; color: #f1cf8a; }
-  .signoff span { color: var(--red); }
+  .ct-title { font-size: 12.5pt; line-height: 1.25; font-weight: 700; font-style: italic; color: var(--navy); }
+  .ct-sub { text-align: center; color: var(--slate); margin-top: 1mm; }
+  .channels { display: grid; grid-template-columns: repeat(4, 1fr); margin-top: 3.4mm; }
+  .ch { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 1mm; padding: 0 2mm; border-left: .6pt solid var(--line); }
+  .ch:first-child { border-left: 0; }
+  .ico { display: block; }
+  .ico svg { width: 5.4mm; height: 5.4mm; stroke: var(--navy); fill: none; stroke-width: 1.4; }
+  .ch i { display: block; font: italic 7pt/1.2 "Liberation Serif", serif; color: var(--slate); order: 3; }
+  .ch b { display: block; font: 700 8.6pt/1.25 "Liberation Sans", sans-serif; color: var(--navy); order: 2; }
+  .ch > div { display: flex; flex-direction: column; gap: .6mm; }
+  .signoff { margin-top: 3mm; padding-top: 2.2mm; border-top: .6pt solid var(--line); text-align: center; font: 700 7pt/1.3 "Liberation Sans", sans-serif; color: var(--slate); }
+  .signoff span { color: var(--line); }
   .hub { display: grid; grid-template-columns: 1fr auto auto; gap: 6mm; align-items: center; border: .6pt solid var(--line); background: var(--bg); padding: var(--pad) 5mm; }
   .hub .kicker { color: var(--navy); font-size: 7.4pt; margin-bottom: 1mm; }
   .hub p { font-style: italic; color: var(--slate); text-align: left; }
@@ -259,7 +259,7 @@
         <b>• Traçabilité des pansements :</b> joindre obligatoirement une photo datée pour justifier la cotation du pansement lourd.<br>
         <b>• Ordonnances conformes :</b> vérifier systématiquement les dates de validité et les mentions de renouvellement.<br>
         <b>• Sécurisation HelpMed DOM :</b> notre coordinatrice administrative filtre et contrôle chaque dossier en amont pour garantir <b>zéro rejet et zéro indu caisse</b>.</p>
-        <div class="teaser">★ Découvrez en page 2 la Solution Premium HelpMed DOM, votre conciergerie clé en main →</div>
+        <div class="teaser">Pour aller plus loin : la Solution Premium HelpMed DOM, présentée en page 2.</div>
       </div>
     </section>
   </div>
@@ -351,12 +351,11 @@
 
   <section class="contact">
     <div class="ct-head">
-      <span class="ct-badge sans">Offert</span>
       <div class="ct-title">Premier contact offert pour une évaluation de votre gestion administrative</div>
       <p class="ct-sub">Échangeons sur votre organisation de tournée et sécurisons ensemble 100 % de votre trésorerie de cabinet.</p>
     </div>
     <div class="channels">
-      <div class="ch"><span class="ico wa"><svg viewBox="0 0 24 24"><rect x="7" y="2" width="10" height="20" rx="2"/><circle cx="12" cy="18" r=".6"/></svg></span><div><i>Mobile direct &amp; WhatsApp</i><b>0690 71 45 71</b></div></div>
+      <div class="ch"><span class="ico"><svg viewBox="0 0 24 24"><rect x="7" y="2" width="10" height="20" rx="2"/><circle cx="12" cy="18" r=".6"/></svg></span><div><i>Mobile direct &amp; WhatsApp</i><b>0690 71 45 71</b></div></div>
       <div class="ch"><span class="ico"><svg viewBox="0 0 24 24"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2z"/></svg></span><div><i>Agence conseil</i><b>0590 26 25 89</b></div></div>
       <div class="ch"><span class="ico"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span><div><i>Courriel professionnel</i><b>contact@helpmed-dom.fr</b></div></div>
       <div class="ch"><span class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg></span><div><i>Portail soignants</i><b>helpmed-dom.fr</b></div></div>
