@@ -1,6 +1,7 @@
 # Newsletter HelpMed DOM — Édition spéciale N° 01
 
-Deux versions A4 du même numéro, avec la même charte :
+Deux versions A4 du même numéro, avec la même charte. **La version 2 pages est le format retenu** ;
+la version 4 pages est tenue à jour avec les mêmes contenus.
 
 | Source          | PDF                      | Contenu                                                                 |
 | --------------- | ------------------------ | ----------------------------------------------------------------------- |
